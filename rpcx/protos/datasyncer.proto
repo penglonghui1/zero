@@ -1,0 +1,21 @@
+syntax ="proto3";
+package pb ;
+option go_package=".;pb";
+
+import "protos/grpc_base.proto";
+
+
+message JoinedTasksRequest{
+  string Keyword=1 ;
+  Paging Paging=2 ;
+  UserContext Context = 3;
+  repeated string Type =4 ; //widget_meeting,widget_todo,widget_timecoll,widget_notice,meeting,task,time_collect
+}
+
+message JoinedTasksResponse{
+  repeated string RefID =1;
+}
+
+service DataSyncer{
+  rpc JoinedTasks(JoinedTasksRequest) returns(Response) ;
+}
