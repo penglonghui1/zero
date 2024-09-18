@@ -1,4 +1,4 @@
-module github.com/pengcainiao/zero
+module github.com/pengcainiao2/zero
 
 go 1.17
 
