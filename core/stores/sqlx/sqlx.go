@@ -17,7 +17,6 @@ type SqlxDB struct {
 }
 
 func MySQL() *SqlxDB {
-	fmt.Println(env.DbDSN)
 	db, err := GetSqlConn("mysql", env.DbDSN)
 	if err != nil {
 		fmt.Println("err:", err)
