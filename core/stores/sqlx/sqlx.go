@@ -3,6 +3,7 @@ package sqlx
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"strings"
 
 	"github.com/pengcainiao/sqlx"
@@ -16,7 +17,11 @@ type SqlxDB struct {
 }
 
 func MySQL() *SqlxDB {
-	db, _ := GetSqlConn("mysql", env.DbDSN)
+	fmt.Println(env.DbDSN)
+	db, err := GetSqlConn("mysql", env.DbDSN)
+	if err != nil {
+		fmt.Println("err:", err)
+	}
 	return &SqlxDB{db: db}
 }
 
