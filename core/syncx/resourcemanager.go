@@ -4,7 +4,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/pengcainiao/zero/core/errorx"
+	"github.com/pengcainiao2/zero/core/errorx"
 )
 
 // A ResourceManager is a manager that used to manage resources.

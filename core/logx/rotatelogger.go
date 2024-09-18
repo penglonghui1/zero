@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pengcainiao/zero/core/fs"
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/fs"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 const (

@@ -9,7 +9,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/logx"
 )
 
 var (
@@ -54,7 +54,7 @@ func (p Paging) Offset() int {
 	return (p.PageNumber - 1) * p.PageRecord
 }
 
-//check 检查分页参数
+// check 检查分页参数
 func (p *Paging) check() {
 	if p.PageRecord == 0 {
 		p.PageRecord = 15
@@ -67,7 +67,7 @@ func (p *Paging) check() {
 	}
 }
 
-//NewContext 创建context
+// NewContext 创建context
 func NewContext(c *gin.Context) *Context {
 	var (
 		headerData HeaderData

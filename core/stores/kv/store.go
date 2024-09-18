@@ -4,10 +4,10 @@ import (
 	"errors"
 	"log"
 
-	"github.com/pengcainiao/zero/core/errorx"
-	"github.com/pengcainiao/zero/core/hash"
-	"github.com/pengcainiao/zero/core/stores/cache"
-	"github.com/pengcainiao/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/errorx"
+	"github.com/pengcainiao2/zero/core/hash"
+	"github.com/pengcainiao2/zero/core/stores/cache"
+	"github.com/pengcainiao2/zero/core/stores/redis"
 )
 
 // ErrNoRedisNode is an error that indicates no redis node.

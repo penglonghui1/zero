@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	sonyflake "github.com/pengcainiao/zero/core/snowflake"
-	"github.com/pengcainiao/zero/rest/httprouter"
+	sonyflake "github.com/pengcainiao2/zero/core/snowflake"
+	"github.com/pengcainiao2/zero/rest/httprouter"
 	"github.com/youzan/go-nsq"
 )
 
@@ -170,7 +170,7 @@ func (t TestConsumeData) HandleMessage(ctx *httprouter.Context, protocol *NsqDat
 	return nil
 }
 
-//nolint
+// nolint
 func getNsqData() NsqDataProtocol {
 	var d = `{"topic":"flyele-nsq-pushgateway-multicast-release","body":{"websocket":{"receiver":[{"receiver_id":"1238663641694355","affected":"1"},{"receiver_id":"1249909260419181","affected":"1"},{"receiver_id":"1191142398361793","affected":"1"}],"ref_id":"100000000000001","ref_type":"1","code":32,"message_id":"1267923357532382","creator_id":"1238663641694355","comment_id":"1267923356483753","message":"你的【测试详情事项】事项将于15分钟后截止","send_from":"1","message_type":6,"subtitle":"事项截止提醒"}},"header":{"data":{},"create_at":"2021-11-16 19:23:57"}}`
 	var v NsqDataProtocol

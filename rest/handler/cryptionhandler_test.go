@@ -9,7 +9,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/pengcainiao/zero/core/codec"
+	"github.com/pengcainiao2/zero/core/codec"
 	"github.com/stretchr/testify/assert"
 )
 

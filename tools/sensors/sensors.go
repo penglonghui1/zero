@@ -3,20 +3,20 @@ package sensors
 import (
 	"context"
 
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/rest/httpx"
 )
 
 var (
 	hook = httpx.WebHook()
 )
 
-//SensorsClient 神策客户端
+// SensorsClient 神策客户端
 func SensorsClient() *Sensor {
 	return SensorDataProducer()
 }
 
-//StartPushSensorsData 开始推送神策数据，应包含与 nsq的HandleMessage方法内
+// StartPushSensorsData 开始推送神策数据，应包含与 nsq的HandleMessage方法内
 func StartPushSensorsData(s SensorTask) error {
 	var (
 		err           error

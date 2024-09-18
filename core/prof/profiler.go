@@ -1,6 +1,6 @@
 package prof
 
-import "github.com/pengcainiao/zero/core/utils"
+import "github.com/pengcainiao2/zero/core/utils"
 
 type (
 	// A ProfilePoint is a profile time point.

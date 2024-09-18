@@ -3,16 +3,16 @@ package rest
 import (
 	"os"
 
-	"github.com/pengcainiao/zero/core/conf"
-	"github.com/pengcainiao/zero/core/sysx"
+	"github.com/pengcainiao2/zero/core/conf"
+	"github.com/pengcainiao2/zero/core/sysx"
 
 	"github.com/gin-gonic/gin"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/service"
-	"github.com/pengcainiao/zero/rest/handler"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/service"
+	"github.com/pengcainiao2/zero/rest/handler"
 )
 
-//NewGinServer 新建gin服务器
+// NewGinServer 新建gin服务器
 func NewGinServer(option ...conf.Option) *gin.Engine {
 	router := gin.New()
 	if err := service.SetupDefaultConf(option...); err != nil {

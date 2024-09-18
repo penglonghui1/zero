@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/timex"
 	"github.com/stretchr/testify/assert"
 )
 

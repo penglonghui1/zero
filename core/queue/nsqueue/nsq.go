@@ -1,6 +1,8 @@
-//NSQ 客户端
+// NSQ 客户端
 // 1、创建topic
+//
 //	curl -X POST 'http://nsq-lookup.infrastructure.svc.cluster.local:4161/topic/create?topic=flyele-nsq-socket-multicast-release&partition_num=2&replicator=1&extend=true&disable_channel_auto_create="true"&orderedmulti=true'
+//
 // 2、创建channel
 // curl -X POST 'http://nsq-lookup.infrastructure.svc.cluster.local:4161/channel/create?topic=flyele-nsq-socket-multicast-release&channel=XXXX
 package nsqueue
@@ -17,15 +19,15 @@ import (
 	semconv "go.opentelemetry.io/otel/semconv/v1.9.0"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/pengcainiao/zero/core/conf"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/logx"
-	sonyflake "github.com/pengcainiao/zero/core/snowflake"
-	"github.com/pengcainiao/zero/core/stores/redis"
-	"github.com/pengcainiao/zero/core/timex"
-	"github.com/pengcainiao/zero/core/trace"
-	"github.com/pengcainiao/zero/rest/httprouter"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/conf"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/logx"
+	sonyflake "github.com/pengcainiao2/zero/core/snowflake"
+	"github.com/pengcainiao2/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/trace"
+	"github.com/pengcainiao2/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/rest/httpx"
 	"github.com/spaolacci/murmur3"
 	"github.com/youzan/go-nsq"
 	"go.opentelemetry.io/otel"
@@ -40,14 +42,14 @@ var (
 )
 
 // Topic
-//非顺序的topic, 由于支持同一个partition进行多个并发消费, 因此无需过多的partitions, 只需保证写入性能满足需求即可,
-//另外为了保持和原版nsq兼容, 每个节点只能有一个分区, 因此分区数*副本数不能大于节点总数. 非顺序的topic可以动态扩建分
-//区不影响业务使用. 建议普通topic使用 2分区2副本, 业务数据很多, 但是不怎么重要的, 比如log数据, 可以使用4分区1副本,
-//对于数据要求很高的, 可以使用2分区3副本(需要6台机器集群).
+// 非顺序的topic, 由于支持同一个partition进行多个并发消费, 因此无需过多的partitions, 只需保证写入性能满足需求即可,
+// 另外为了保持和原版nsq兼容, 每个节点只能有一个分区, 因此分区数*副本数不能大于节点总数. 非顺序的topic可以动态扩建分
+// 区不影响业务使用. 建议普通topic使用 2分区2副本, 业务数据很多, 但是不怎么重要的, 比如log数据, 可以使用4分区1副本,
+// 对于数据要求很高的, 可以使用2分区3副本(需要6台机器集群).
 //
-//对于顺序的topic, 分区数取决于消费能力, 如果需要更高的并发度, 可以优化消费业务的消费能力, 如果消费能力已经无法优化,
-//则需要更多的分区数提高并发能力. 大部分情况下16个分区可以满足大部分需求, 如果吞吐量很大, 还需要实际计算消费业务的延
-//迟来决定. 由于顺序消费topic在动态扩建topic时会导致无序消息, 因此需要规划一个较长时间的潜在能力.
+// 对于顺序的topic, 分区数取决于消费能力, 如果需要更高的并发度, 可以优化消费业务的消费能力, 如果消费能力已经无法优化,
+// 则需要更多的分区数提高并发能力. 大部分情况下16个分区可以满足大部分需求, 如果吞吐量很大, 还需要实际计算消费业务的延
+// 迟来决定. 由于顺序消费topic在动态扩建topic时会导致无序消息, 因此需要规划一个较长时间的潜在能力.
 // 非顺序的topic，无需过多partition，能保证写入性能就行 ，建议2分区1副本
 // 顺序的topic，建议2分区1副本
 type Topic struct {
@@ -73,7 +75,7 @@ type NsqDataProtocol struct {
 	Header    MessageHeader `json:"header"`          //在传递中使用 json ext传输
 }
 
-//MessageHeader 消息头
+// MessageHeader 消息头
 type MessageHeader struct {
 	Data     httprouter.HeaderData `json:"data"`
 	CreateAt string                `json:"create_at"` //创建时间
@@ -182,7 +184,7 @@ func FromNsqMessage(message *nsq.Message, consume MqMessageConsumer) *NsqDataPro
 	return np
 }
 
-//UnmarshalNsqMessage 将NSQ的消息转换为指定的对象
+// UnmarshalNsqMessage 将NSQ的消息转换为指定的对象
 func UnmarshalNsqMessage(msg *nsq.Message, bodyDst *MqMessageConsumer) *NsqDataProtocol {
 	var np = &NsqDataProtocol{Body: bodyDst}
 	_ = json.Unmarshal(msg.Body, &np)
@@ -210,7 +212,7 @@ func (t *Topic) check() {
 	}
 }
 
-//NewNsqLookup 创建nsqd实例
+// NewNsqLookup 创建nsqd实例
 func NewNsqLookup(opts ...conf.Option) *Nsq {
 	cfg := nsq.NewConfig()
 	cfg.Hasher = murmur3.New32()
@@ -237,7 +239,7 @@ func (ns *Nsq) ensureTopic(topics ...*Topic) []string {
 	return t
 }
 
-//NewProducer 创建消费者
+// NewProducer 创建消费者
 func (ns *Nsq) NewProducer(topic ...*Topic) error {
 	if !env.IsRunningInK8s() {
 		return errNotRunningWithK8s
@@ -260,7 +262,7 @@ func (ns *Nsq) NewProducer(topic ...*Topic) error {
 	return nil
 }
 
-//Publish 发布消息
+// Publish 发布消息
 func (ns *Nsq) Publish(topic *Topic, protocol NsqDataProtocol) error {
 	if !env.IsRunningInK8s() {
 		return errNotRunningWithK8s
@@ -296,7 +298,7 @@ func (ns *Nsq) Publish(topic *Topic, protocol NsqDataProtocol) error {
 	return err
 }
 
-//NewConsumer 创建新的消息队列消费者
+// NewConsumer 创建新的消息队列消费者
 func (ns *Nsq) NewConsumer(topic *Topic, handler nsq.Handler) error {
 	if topic.Channel == "" {
 		topic.Channel = "default_channel"
@@ -352,8 +354,8 @@ func (ns *Nsq) startConsume(topic *Topic, handler nsq.Handler, cons *nsq.Consume
 	return nil
 }
 
-//IsUniqueMessageInSeconds 验证消息ID在一段时间内是否唯一，当前逻辑存在消息消费不准确的情况，使用 IsUniqueMessage 代替，3小时内确保唯一
-//Deprecated
+// IsUniqueMessageInSeconds 验证消息ID在一段时间内是否唯一，当前逻辑存在消息消费不准确的情况，使用 IsUniqueMessage 代替，3小时内确保唯一
+// Deprecated
 func IsUniqueMessageInSeconds(traceID uint64, seconds int) bool {
 	if traceID < 10000000000 {
 		// 日程提醒的traceID生成算法：
@@ -367,7 +369,7 @@ func IsUniqueMessageInSeconds(traceID uint64, seconds int) bool {
 	return redis.Client().SetNX(context.Background(), key, 1, time.Second*time.Duration(seconds)).Val()
 }
 
-//IsUniqueRdsKey 识别消息是否唯一
+// IsUniqueRdsKey 识别消息是否唯一
 func IsUniqueRdsKey(rdsKey string) (unique bool) {
 	return redis.Client().SetNX(context.Background(), rdsKey, "1", timex.RandomExpireSeconds(time.Minute*5)).Val()
 }

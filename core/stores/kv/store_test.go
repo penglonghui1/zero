@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/alicebob/miniredis/v2"
-	"github.com/pengcainiao/zero/core/hash"
-	"github.com/pengcainiao/zero/core/stores/cache"
-	"github.com/pengcainiao/zero/core/stores/redis"
-	"github.com/pengcainiao/zero/core/stringx"
+	"github.com/pengcainiao2/zero/core/hash"
+	"github.com/pengcainiao2/zero/core/stores/cache"
+	"github.com/pengcainiao2/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/stringx"
 	"github.com/stretchr/testify/assert"
 )
 

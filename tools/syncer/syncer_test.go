@@ -1,13 +1,14 @@
 package syncer
+
 //
 //import (
 //	"context"
 //	"testing"
 //
-//	"github.com/pengcainiao/zero/core/bloom"
+//	"github.com/pengcainiao2/zero/core/bloom"
 //	"github.com/stretchr/testify/assert"
 //
-//	"github.com/pengcainiao/zero/core/queue/nsqueue"
+//	"github.com/pengcainiao2/zero/core/queue/nsqueue"
 //)
 //
 //func TestNSQ(t *testing.T) {

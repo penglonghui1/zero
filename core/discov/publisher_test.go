@@ -8,9 +8,9 @@ import (
 	"zero/core/discov/internal"
 
 	"github.com/golang/mock/gomock"
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/stringx"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/stringx"
 	"github.com/stretchr/testify/assert"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )

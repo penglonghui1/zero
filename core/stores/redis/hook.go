@@ -6,9 +6,9 @@ import (
 	"time"
 
 	red "github.com/go-redis/redis/v8"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/mapping"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/mapping"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 var (

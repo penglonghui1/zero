@@ -6,12 +6,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/tools"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/tools"
 
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/rest/httprouter"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/rest/httpx"
 )
 
 var (

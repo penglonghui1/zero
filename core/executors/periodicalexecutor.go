@@ -6,11 +6,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/proc"
-	"github.com/pengcainiao/zero/core/syncx"
-	"github.com/pengcainiao/zero/core/threading"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/proc"
+	"github.com/pengcainiao2/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/threading"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 const idleRound = 10

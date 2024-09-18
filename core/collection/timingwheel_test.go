@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/stringx"
-	"github.com/pengcainiao/zero/core/syncx"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/stringx"
+	"github.com/pengcainiao2/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/timex"
 	"github.com/stretchr/testify/assert"
 )
 

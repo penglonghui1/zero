@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/pengcainiao/zero/core/env"
+	"github.com/pengcainiao2/zero/core/env"
 
 	red "github.com/go-redis/redis/v8"
-	"github.com/pengcainiao/zero/core/trace"
+	"github.com/pengcainiao2/zero/core/trace"
 	"go.opentelemetry.io/otel/attribute"
 	oteltrace "go.opentelemetry.io/otel/trace"
 )

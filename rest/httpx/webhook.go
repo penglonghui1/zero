@@ -9,15 +9,15 @@ import (
 	"strings"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/sysx"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/sysx"
 )
 
-//WebHookRebot 企业微信webhook 机器人
+// WebHookRebot 企业微信webhook 机器人
 type WebHookRebot string
 
-//MessageType 消息类型
+// MessageType 消息类型
 type MessageType string
 type ReportErrors struct {
 	Title   string                 `json:"title,omitempty"`   //标题

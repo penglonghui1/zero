@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/stat"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/peer"

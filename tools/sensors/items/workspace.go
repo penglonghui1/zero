@@ -1,6 +1,6 @@
 package items
 
-import "github.com/pengcainiao/zero/tools/sensors"
+import "github.com/pengcainiao2/zero/tools/sensors"
 
 type Workspace struct {
 	ItemID                           string `json:"item_id"`                                        // 空间ID

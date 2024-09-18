@@ -28,7 +28,7 @@ function getdir() {
 function router() {
   g=$1
   if [ $(basename $g) == 'router.go' ]; then
-    sed -i '4i\"github.com/pengcainiao/zero/rest"' "$g"
+    sed -i '4i\"github.com/pengcainiao2/zero/rest"' "$g"
     sed -i 's/gin.Default()/rest.NewGinServer()/g' "$g"
     # 删除graceFullShutdown中对health server的引用
     sed -i 's/setupHealthZ(),//' "$g"
@@ -59,12 +59,12 @@ function replaceGoImport() {
   if [ -f "$g" ]; then
 
 
-  insertImports "$g" "github.com/pengcainiao/zero/core/logx"
-  insertImports "$g" "github.com/pengcainiao/zero/core/queue/nsqueue"
-  insertImports "$g" "github.com/pengcainiao/zero/core/snowflake"
-  insertImports "$g" "github.com/pengcainiao/zero/core/sensorsx"
-  insertImports "$g" "github.com/pengcainiao/zero/core/sensorsx/items"
-  insertImports "$g" "github.com/pengcainiao/zero/core/discov"
+  insertImports "$g" "github.com/pengcainiao2/zero/core/logx"
+  insertImports "$g" "github.com/pengcainiao2/zero/core/queue/nsqueue"
+  insertImports "$g" "github.com/pengcainiao2/zero/core/snowflake"
+  insertImports "$g" "github.com/pengcainiao2/zero/core/sensorsx"
+  insertImports "$g" "github.com/pengcainiao2/zero/core/sensorsx/items"
+  insertImports "$g" "github.com/pengcainiao2/zero/core/discov"
   insertImports "$g" "gitlab.flyele.vip/server-side/go-zero/core/timex"
   insertImports "$g" "gitlab.flyele.vip/server-side/go-zero/core/conf"
 
@@ -166,7 +166,7 @@ projectPath=/Users/rudy/Desktop/work/coding/golang/src/gitlab.flyele.vip/flyele
 getdir $projectPath
 
 cd $projectPath
-go get -u github.com/pengcainiao/zero
+go get -u github.com/pengcainiao2/zero
 
 for g in ${arr[*]}; do
   router ""$g""

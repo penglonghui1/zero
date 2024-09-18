@@ -1,7 +1,7 @@
 package metric
 
 import (
-	"github.com/pengcainiao/zero/core/proc"
+	"github.com/pengcainiao2/zero/core/proc"
 	prom "github.com/prometheus/client_golang/prometheus"
 )
 

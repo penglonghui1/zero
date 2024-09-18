@@ -7,11 +7,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pengcainiao/zero/core/collection"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/stat"
-	"github.com/pengcainiao/zero/core/syncx"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/collection"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 const (

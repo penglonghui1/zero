@@ -2,10 +2,10 @@ package queue
 
 import (
 	"context"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/queue/nsqueue"
-	"github.com/pengcainiao/zero/rest/httprouter"
-	"github.com/pengcainiao/zero/tools/sensors"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/queue/nsqueue"
+	"github.com/pengcainiao2/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/tools/sensors"
 	"github.com/youzan/go-nsq"
 	"sync"
 	"sync/atomic"

@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/rest/httprouter"
 	"github.com/tidwall/gjson"
 )
 

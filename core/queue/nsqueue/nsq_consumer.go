@@ -8,17 +8,17 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/pengcainiao/zero/core/sysx"
+	"github.com/pengcainiao2/zero/core/sysx"
 
-	"github.com/pengcainiao/zero/core/env"
+	"github.com/pengcainiao2/zero/core/env"
 
-	"github.com/pengcainiao/zero/core/stores/redis"
-	"github.com/pengcainiao/zero/core/stores/sqlx"
+	"github.com/pengcainiao2/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/stores/sqlx"
 
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/rest/httpx"
 
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/rest/httprouter"
 	"github.com/youzan/go-nsq"
 )
 

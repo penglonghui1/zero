@@ -2,17 +2,17 @@ package syncer
 
 import (
 	"context"
-	"github.com/pengcainiao/zero/core/bloom"
+	"github.com/pengcainiao2/zero/core/bloom"
 	"os"
 
-	"github.com/pengcainiao/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/rest/httprouter"
 )
 
 var (
 	filterMap = make(map[HoldingType]*bloom.Filter)
 )
 
-//BloomClient 布隆过滤器
+// BloomClient 布隆过滤器
 func BloomClient(holdingType HoldingType) *bloom.Filter {
 	var bitSize uint = 1024 * 1024 * 8 * 2 //默认2M
 	//switch holdingType {
@@ -37,6 +37,7 @@ func filterExists(filter *bloom.Filter, businessID string) httprouter.Response {
 func IsInitialed(holdingType HoldingType) bool {
 	return Redis().Exists(context.Background(), string(holdingType)).Val() == 1
 }
+
 //
 //// TaskExists 判断事项是否存在
 //func TaskExists(businessID string) httprouter.Response {
@@ -64,6 +65,7 @@ func UserExists(businessID string) httprouter.Response {
 	}
 	return filterExists(filter, businessID)
 }
+
 //
 //// FileExists 判断文件是否存在
 //func FileExists(businessID string) httprouter.Response {

@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 const defaultRefreshInterval = time.Second

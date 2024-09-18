@@ -3,14 +3,14 @@ package service
 import (
 	"log"
 
-	"github.com/pengcainiao/zero/core/conf"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/load"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/prometheus"
-	"github.com/pengcainiao/zero/core/stat"
-	"github.com/pengcainiao/zero/core/sysx"
-	"github.com/pengcainiao/zero/core/trace"
+	"github.com/pengcainiao2/zero/core/conf"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/load"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/prometheus"
+	"github.com/pengcainiao2/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/sysx"
+	"github.com/pengcainiao2/zero/core/trace"
 )
 
 const (

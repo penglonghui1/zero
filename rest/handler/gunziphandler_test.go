@@ -9,8 +9,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/pengcainiao/zero/core/codec"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/codec"
+	"github.com/pengcainiao2/zero/rest/httpx"
 	"github.com/stretchr/testify/assert"
 )
 

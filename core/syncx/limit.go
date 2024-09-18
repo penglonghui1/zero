@@ -3,7 +3,7 @@ package syncx
 import (
 	"errors"
 
-	"github.com/pengcainiao/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/lang"
 )
 
 // ErrLimitReturn indicates that the more than borrowed elements were returned.

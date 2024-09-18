@@ -3,7 +3,7 @@ package grpcbase
 import (
 	"context"
 	"fmt"
-	"github.com/pengcainiao/zero/rpcx/grpcbase/pool"
+	"github.com/pengcainiao2/zero/rpcx/grpcbase/pool"
 	"os"
 	"sync"
 )
@@ -13,7 +13,7 @@ var (
 	rpcConnPool = sync.Map{} //make(map[string]pool.Pool)
 )
 
-//RegisterClients 注册grpc客户端
+// RegisterClients 注册grpc客户端
 func RegisterClients(serviceName string, binding ClientBinding) {
 	clients[serviceName] = binding
 }

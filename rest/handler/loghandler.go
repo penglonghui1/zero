@@ -6,7 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/pengcainiao/zero/rest/internal"
+	"github.com/pengcainiao2/zero/rest/internal"
 	"io"
 	"io/ioutil"
 	"net"
@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pengcainiao/zero/core/iox"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/syncx"
-	"github.com/pengcainiao/zero/core/timex"
-	"github.com/pengcainiao/zero/core/utils"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/iox"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/utils"
+	"github.com/pengcainiao2/zero/rest/httpx"
 )
 
 const (

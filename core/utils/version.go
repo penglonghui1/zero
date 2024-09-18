@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pengcainiao/zero/core/mathx"
-	"github.com/pengcainiao/zero/core/stringx"
+	"github.com/pengcainiao2/zero/core/mathx"
+	"github.com/pengcainiao2/zero/core/stringx"
 )
 
 var replacer = stringx.NewReplacer(map[string]string{

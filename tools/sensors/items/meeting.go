@@ -1,7 +1,7 @@
 package items
 
 import (
-	"github.com/pengcainiao/zero/tools/sensors"
+	"github.com/pengcainiao2/zero/tools/sensors"
 )
 
 type MeetingState string

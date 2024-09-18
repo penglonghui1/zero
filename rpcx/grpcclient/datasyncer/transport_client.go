@@ -7,8 +7,8 @@ package datasyncer
 import (
 	"context"
 	"errors"
-	"github.com/pengcainiao/zero/rpcx/grpcbase"
-	pb "github.com/pengcainiao/zero/rpcx/protos"
+	"github.com/pengcainiao2/zero/rpcx/grpcbase"
+	pb "github.com/pengcainiao2/zero/rpcx/protos"
 )
 
 func encodeJoinedTasksRequest(ctx context.Context, req interface{}) (request interface{}, err error) {

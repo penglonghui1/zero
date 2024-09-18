@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/alicebob/miniredis/v2"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/stores/redis"
-	"github.com/pengcainiao/zero/core/stores/redis/redistest"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/stores/redis/redistest"
 	"github.com/stretchr/testify/assert"
 )
 

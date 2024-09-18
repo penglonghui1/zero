@@ -1,6 +1,6 @@
 package queue
 
-import "github.com/pengcainiao/zero/core/errorx"
+import "github.com/pengcainiao2/zero/core/errorx"
 
 // A MultiPusher is a pusher that can push messages to multiple underlying pushers.
 type MultiPusher struct {

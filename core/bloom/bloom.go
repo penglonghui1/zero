@@ -3,8 +3,8 @@ package bloom
 import (
 	"context"
 	"errors"
-	"github.com/pengcainiao/zero/core/hash"
-	"github.com/pengcainiao/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/hash"
+	"github.com/pengcainiao2/zero/core/stores/redis"
 	"strconv"
 	"time"
 )
@@ -158,4 +158,3 @@ func (r *redisBitSet) set(offsets []uint) error {
 
 	return err
 }
-

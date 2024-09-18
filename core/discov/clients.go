@@ -2,7 +2,7 @@ package discov
 
 import (
 	"fmt"
-	"github.com/pengcainiao/zero/core/discov/internal"
+	"github.com/pengcainiao2/zero/core/discov/internal"
 	"strings"
 )
 

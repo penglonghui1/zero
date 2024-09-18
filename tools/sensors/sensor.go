@@ -5,9 +5,9 @@ import (
 	"net/url"
 	"sync"
 
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/sysx"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/sysx"
 	sdk "github.com/sensorsdata/sa-sdk-go"
 	"github.com/sensorsdata/sa-sdk-go/consumers"
 )
@@ -27,7 +27,7 @@ type ClientConfig struct {
 	Lib *Lib
 }
 
-//SensorDataProducer 向神策服务器发送数据
+// SensorDataProducer 向神策服务器发送数据
 func SensorDataProducer() *Sensor {
 	// 从神策分析配置页面中获取数据接收的 URL
 	initOnce.Do(func() {

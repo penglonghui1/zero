@@ -5,7 +5,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/pengcainiao/zero/rest/internal"
+	"github.com/pengcainiao2/zero/rest/internal"
 	"io"
 	"net/http"
 	"path"
@@ -14,8 +14,7 @@ import (
 	"sync"
 	"time"
 
-
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/rest/httpx"
 )
 
 const (

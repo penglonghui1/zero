@@ -1,10 +1,10 @@
 package discov
 
 import (
-	"github.com/pengcainiao/zero/core/discov/internal"
+	"github.com/pengcainiao2/zero/core/discov/internal"
 	"testing"
 
-	"github.com/pengcainiao/zero/core/stringx"
+	"github.com/pengcainiao2/zero/core/stringx"
 	"github.com/stretchr/testify/assert"
 )
 

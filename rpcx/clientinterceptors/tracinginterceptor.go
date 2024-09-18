@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	zerotrace "github.com/pengcainiao/zero/core/trace"
+	zerotrace "github.com/pengcainiao2/zero/core/trace"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"

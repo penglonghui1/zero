@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/alicebob/miniredis/v2"
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/stores/redis"
 )
 
 // CreateRedis returns a in process redis.Redis.

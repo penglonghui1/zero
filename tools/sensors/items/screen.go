@@ -1,6 +1,6 @@
 package items
 
-import "github.com/pengcainiao/zero/tools/sensors"
+import "github.com/pengcainiao2/zero/tools/sensors"
 
 type Screen struct {
 	ItemID          string `json:"item_id,omitempty"`          // 视图ID

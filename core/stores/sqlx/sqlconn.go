@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"github.com/pengcainiao/sqlx"
 
-	"github.com/pengcainiao/zero/core/breaker"
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/breaker"
+	"github.com/pengcainiao2/zero/core/logx"
 )
 
 // ErrNotFound is an alias of sql.ErrNoRows

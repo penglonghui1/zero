@@ -1,6 +1,6 @@
 package items
 
-import "github.com/pengcainiao/zero/tools/sensors"
+import "github.com/pengcainiao2/zero/tools/sensors"
 
 type Application struct {
 	ItemID                         string `json:"item_id,omitempty"`                          // 应用ID

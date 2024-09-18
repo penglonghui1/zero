@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 
-	"github.com/pengcainiao/zero/core/conf"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/core/conf"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/rest/httprouter"
 	"github.com/youzan/go-nsq"
 )
 
@@ -30,8 +30,9 @@ const (
 	OrderedHigh   Priority = "-high"
 )
 
-//SetProducerManager 一个服务中消费多个topic时，先创建NSQ实例，减少连接数
-// 	example
+// SetProducerManager 一个服务中消费多个topic时，先创建NSQ实例，减少连接数
+//
+//	example
 //	var topic = &Topic{
 //		Name:            "nsq-test-topic",
 //		EnableOrdered:   false,
@@ -75,7 +76,7 @@ func (t *Topic) Priority(priority Priority) *Topic {
 	return t
 }
 
-//Producer 向topic发送数据，设置header中的 SentryTraceID
+// Producer 向topic发送数据，设置header中的 SentryTraceID
 func (t *Topic) Producer(ctx *httprouter.Context, data NsqDataProtocol, opts ...conf.Option) error {
 	if !env.IsRunningInK8s() {
 		logx.NewTraceLogger(context.Background()).Err(errNotRunningWithK8s).Msg("publish 消息失败")
@@ -98,8 +99,8 @@ func (t *Topic) Producer(ctx *httprouter.Context, data NsqDataProtocol, opts ...
 	return t.nsqmgr.Publish(t, data)
 }
 
-//Consume 使用内部包装的类型 wrappedMqMessageConsumerHandler 统一处理了使用MQ要面临的分布式问题，包括幂等、失败后的重试策略等
-//参数 consumer 可不使用指针，但 New()方法返回值必须为指针
+// Consume 使用内部包装的类型 wrappedMqMessageConsumerHandler 统一处理了使用MQ要面临的分布式问题，包括幂等、失败后的重试策略等
+// 参数 consumer 可不使用指针，但 New()方法返回值必须为指针
 func (t *Topic) Consume(consumer MqMessageConsumer, options ...conf.Option) error {
 	var err error
 	if t.nsqmgr == nil {
@@ -123,8 +124,8 @@ func (t *Topic) Consume(consumer MqMessageConsumer, options ...conf.Option) erro
 	return t.nsqmgr.NewConsumer(t, wrapped)
 }
 
-//StartConsume 开始消费数据
-//Deprecated: 使用 Consume 方法代替，新的方法封装了复杂过程
+// StartConsume 开始消费数据
+// Deprecated: 使用 Consume 方法代替，新的方法封装了复杂过程
 func (t *Topic) StartConsume(handler nsq.Handler, opts ...conf.Option) error {
 	if !env.IsRunningInK8s() {
 		return errNotRunningWithK8s
@@ -142,8 +143,8 @@ func (t *Topic) StartConsume(handler nsq.Handler, opts ...conf.Option) error {
 	return t.nsqmgr.NewConsumer(t, handler)
 }
 
-//Publish 向topic发送数据，设置header中的 SentryTraceID
-//Deprecated:使用 Producer 方法代替
+// Publish 向topic发送数据，设置header中的 SentryTraceID
+// Deprecated:使用 Producer 方法代替
 func (t *Topic) Publish(data NsqDataProtocol, opts ...conf.Option) error {
 	if !env.IsRunningInK8s() {
 		logx.NewTraceLogger(context.Background()).Err(errNotRunningWithK8s).Msg("publish 消息失败")

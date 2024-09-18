@@ -7,12 +7,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/pengcainiao/zero/core/env"
+	"github.com/pengcainiao2/zero/core/env"
 
 	red "github.com/go-redis/redis/v8"
-	"github.com/pengcainiao/zero/core/breaker"
-	"github.com/pengcainiao/zero/core/mapping"
-	"github.com/pengcainiao/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/breaker"
+	"github.com/pengcainiao2/zero/core/mapping"
+	"github.com/pengcainiao2/zero/core/syncx"
 )
 
 const (

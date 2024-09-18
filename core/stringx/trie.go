@@ -1,6 +1,6 @@
 package stringx
 
-import "github.com/pengcainiao/zero/core/lang"
+import "github.com/pengcainiao2/zero/core/lang"
 
 const defaultMask = '*'
 

@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pengcainiao/zero/core/contextx"
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/syncx"
-	"github.com/pengcainiao/zero/core/threading"
+	"github.com/pengcainiao2/zero/core/contextx"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/threading"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )
 

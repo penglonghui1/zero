@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/pengcainiao/zero/core/load"
-	"github.com/pengcainiao/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/load"
+	"github.com/pengcainiao2/zero/core/stat"
 	"github.com/stretchr/testify/assert"
 )
 

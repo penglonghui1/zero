@@ -6,7 +6,7 @@ package datasyncer
 
 import (
 	"context"
-	"github.com/pengcainiao/zero/rpcx/grpcbase"
+	"github.com/pengcainiao2/zero/rpcx/grpcbase"
 	"log"
 
 	"github.com/go-kit/kit/endpoint"

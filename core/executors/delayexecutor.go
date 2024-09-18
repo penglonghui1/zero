@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pengcainiao/zero/core/threading"
+	"github.com/pengcainiao2/zero/core/threading"
 )
 
 // A DelayExecutor delays a tasks on given delay interval.

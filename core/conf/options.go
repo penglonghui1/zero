@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"github.com/pengcainiao/zero/core/env"
+	"github.com/pengcainiao2/zero/core/env"
 	"time"
 )
 
@@ -72,7 +72,7 @@ func (c *Options) setDefault() {
 	}
 }
 
-//WithMaxNSQGoroutineCount 设置可以用来处理MQ消息的协程数
+// WithMaxNSQGoroutineCount 设置可以用来处理MQ消息的协程数
 func WithMaxNSQGoroutineCount(goroutines int) Option {
 	return func(parameter *Options) {
 		parameter.MaxNSQGoroutineCount = goroutines

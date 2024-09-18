@@ -3,11 +3,11 @@ package breaker
 import (
 	"errors"
 	"fmt"
-	"github.com/pengcainiao/zero/core/mathx"
-	"github.com/pengcainiao/zero/core/proc"
-	"github.com/pengcainiao/zero/core/stat"
-	"github.com/pengcainiao/zero/core/stringx"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/mathx"
+	"github.com/pengcainiao2/zero/core/proc"
+	"github.com/pengcainiao2/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/stringx"
+	"github.com/pengcainiao2/zero/core/timex"
 	"strings"
 	"sync"
 )

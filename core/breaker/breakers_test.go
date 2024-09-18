@@ -3,7 +3,7 @@ package breaker
 import (
 	"errors"
 	"fmt"
-	"github.com/pengcainiao/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/stat"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

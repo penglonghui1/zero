@@ -8,29 +8,29 @@ import (
 
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	"github.com/pengcainiao/sqlx"
-	"github.com/pengcainiao/zero/core/discov"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/queue/nsqueue"
-	sonyflake "github.com/pengcainiao/zero/core/snowflake"
-	"github.com/pengcainiao/zero/core/stores/redis"
-	coresqlx "github.com/pengcainiao/zero/core/stores/sqlx"
-	_ "github.com/pengcainiao/zero/core/sysx"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/discov"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/queue/nsqueue"
+	sonyflake "github.com/pengcainiao2/zero/core/snowflake"
+	"github.com/pengcainiao2/zero/core/stores/redis"
+	coresqlx "github.com/pengcainiao2/zero/core/stores/sqlx"
+	_ "github.com/pengcainiao2/zero/core/sysx"
+	"github.com/pengcainiao2/zero/rest/httpx"
 )
 
 type HoldingType string
 
 const (
-	HoldingUsers                HoldingType = "bloom:user"      //HoldingUsers 存储用户ID
+	HoldingUsers HoldingType = "bloom:user" //HoldingUsers 存储用户ID
 	//HoldingTasks                HoldingType = "bloom:task"      //HoldingTasks 存储事项或会议ID
 	//HoldingTaskDispatches       HoldingType = "bloom:task:disp" //HoldingTaskDispatches 存储分发ID
-	HoldingRecords              HoldingType = "bloom:record"    //HoldingRecords 存储记录ID
-	HoldingProjects             HoldingType = "bloom:project"   //HoldingProjects 存储评论ID
-	HoldingFiles                HoldingType = "bloom:files"     //HoldingFiles 存储文件ID
-	HoldingComments             HoldingType = "bloom:commemt"   //HoldingComments 存储评论ID
-	DefaultExpireDuration                   = time.Hour * 24    // DefaultExpireDuration 默认过期时间
-	NotExistsItemExpireDuration             = time.Hour * 2     // NotExistsItemExpireDuration 查询不到过期时间
+	HoldingRecords              HoldingType = "bloom:record"  //HoldingRecords 存储记录ID
+	HoldingProjects             HoldingType = "bloom:project" //HoldingProjects 存储评论ID
+	HoldingFiles                HoldingType = "bloom:files"   //HoldingFiles 存储文件ID
+	HoldingComments             HoldingType = "bloom:commemt" //HoldingComments 存储评论ID
+	DefaultExpireDuration                   = time.Hour * 24  // DefaultExpireDuration 默认过期时间
+	NotExistsItemExpireDuration             = time.Hour * 2   // NotExistsItemExpireDuration 查询不到过期时间
 )
 
 func init() {
@@ -58,17 +58,17 @@ func init() {
 	})
 }
 
-//MySQL mysql数据库连接
+// MySQL mysql数据库连接
 func MySQL() *coresqlx.SqlxDB {
 	return coresqlx.MySQL()
 }
 
-//Redis redis数据库连接
+// Redis redis数据库连接
 func Redis() redis.RedisNode {
 	return redis.Client()
 }
 
-//Etcd ETCD客户端
+// Etcd ETCD客户端
 func Etcd() *discov.EtcdClient {
 	return discov.Etcd()
 }
@@ -112,7 +112,7 @@ func DefaultExpireTimeMinute(minute ...int) time.Duration {
 	return time.Duration(n) + time.Minute
 }
 
-//RandomExpireSeconds 在基准值的基础上加2小时随机时间
+// RandomExpireSeconds 在基准值的基础上加2小时随机时间
 func RandomExpireSeconds(base time.Duration) time.Duration {
 	rand.Seed(time.Now().UnixNano())
 	n := rand.Intn(1800)

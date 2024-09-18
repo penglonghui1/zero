@@ -1,11 +1,11 @@
 package events
 
-import "github.com/pengcainiao/zero/tools/sensors"
+import "github.com/pengcainiao2/zero/tools/sensors"
 
-//BusinessType 事项类型
+// BusinessType 事项类型
 type BusinessType string
 
-//UserIdentity 参与人身份
+// UserIdentity 参与人身份
 type UserIdentity string
 
 const (

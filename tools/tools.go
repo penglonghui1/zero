@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pengcainiao/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/rest/httprouter"
 	"golang.org/x/crypto/bcrypt"
 
 	"github.com/963204765/httpclient/httplib"
@@ -244,8 +244,8 @@ func ArrayDiff(a, b []string) []string {
 	return diffArray
 }
 
-//SendHTTP 发送http请求
-//Deprecated: 使用 httprouter.PerformanceRequest 代替，新的方法中集成了sentry
+// SendHTTP 发送http请求
+// Deprecated: 使用 httprouter.PerformanceRequest 代替，新的方法中集成了sentry
 func SendHTTP(ctx *httprouter.Context, method, url string) *httplib.BeegoHTTPRequest {
 	req := httplib.NewBeegoRequest(url, method)
 	req.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true})

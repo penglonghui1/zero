@@ -7,7 +7,7 @@ import (
 
 	"github.com/pengcainiao/sqlx"
 
-	"github.com/pengcainiao/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/syncx"
 )
 
 var (

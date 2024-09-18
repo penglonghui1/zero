@@ -4,7 +4,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/logx"
 )
 
 const statInterval = time.Minute

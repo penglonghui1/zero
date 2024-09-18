@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/mathx"
-	"github.com/pengcainiao/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/mathx"
+	"github.com/pengcainiao2/zero/core/syncx"
 )
 
 const (

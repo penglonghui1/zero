@@ -2,14 +2,14 @@ package handler
 
 import (
 	"fmt"
-	"github.com/pengcainiao/zero/rest/internal/response"
+	"github.com/pengcainiao2/zero/rest/internal/response"
 	"net/http"
 	"strings"
 
-	"github.com/pengcainiao/zero/core/breaker"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/stat"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/breaker"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/stat"
+	"github.com/pengcainiao2/zero/rest/httpx"
 )
 
 const breakerSeparator = "://"

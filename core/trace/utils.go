@@ -7,7 +7,7 @@ import (
 
 	"go.opentelemetry.io/otel"
 
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/logx"
 	oteltrace "go.opentelemetry.io/otel/trace"
 
 	"go.opentelemetry.io/otel/attribute"

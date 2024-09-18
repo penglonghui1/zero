@@ -1,6 +1,6 @@
 package _map
 
-import "github.com/pengcainiao/zero/tools/utils"
+import "github.com/pengcainiao2/zero/tools/utils"
 
 type Map map[string]interface {
 }

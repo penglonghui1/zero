@@ -3,13 +3,13 @@ package handler
 import (
 	"context"
 	"errors"
-	"github.com/pengcainiao/zero/rest/internal/response"
+	"github.com/pengcainiao2/zero/rest/internal/response"
 	"net/http"
 	"net/http/httputil"
 
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/rest/token"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/rest/token"
 )
 
 const (

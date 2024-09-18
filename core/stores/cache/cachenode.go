@@ -8,12 +8,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pengcainiao/zero/core/jsonx"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/mathx"
-	"github.com/pengcainiao/zero/core/stat"
-	"github.com/pengcainiao/zero/core/stores/redis"
-	"github.com/pengcainiao/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/jsonx"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/mathx"
+	"github.com/pengcainiao2/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/stores/redis"
+	"github.com/pengcainiao2/zero/core/syncx"
 )
 
 const (

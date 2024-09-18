@@ -1,6 +1,6 @@
 package events
 
-import "github.com/pengcainiao/zero/tools/sensors"
+import "github.com/pengcainiao2/zero/tools/sensors"
 
 type PushQrCodeEvent struct {
 	sensors.BaseEvent

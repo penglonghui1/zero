@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/logx"
 
-	"github.com/pengcainiao/zero/core/conf"
+	"github.com/pengcainiao2/zero/core/conf"
 
 	"go.etcd.io/etcd/api/v3/mvccpb"
 	"go.etcd.io/etcd/api/v3/v3rpc/rpctypes"
@@ -32,7 +32,7 @@ var (
 type EtcdChangeType string
 type GetResponse string
 
-//WatchKeyChanged 当监听的key发生变化时发送
+// WatchKeyChanged 当监听的key发生变化时发送
 type WatchKeyChanged func(event EtcdChangeType, v string)
 
 type EtcdClient struct {
@@ -93,7 +93,7 @@ func (t *EtcdClient) WatchKey(keyName string, onChange WatchKeyChanged) {
 	}
 }
 
-//LoadOrStore 加载或存储
+// LoadOrStore 加载或存储
 func (t *EtcdClient) LoadOrStore(keyName, value string, opts ...clientv3.OpOption) GetResponse {
 	ctx, cancel := context.WithTimeout(context.TODO(), defaultTimeout)
 	go func() {

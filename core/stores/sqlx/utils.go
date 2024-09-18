@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/mapping"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/mapping"
 )
 
 func desensitize(datasource string) string {

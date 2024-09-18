@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/pengcainiao/zero/rest/internal"
+	"github.com/pengcainiao2/zero/rest/internal"
 	"net/http"
 )
 

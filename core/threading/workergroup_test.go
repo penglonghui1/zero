@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/pengcainiao/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/lang"
 	"github.com/stretchr/testify/assert"
 )
 

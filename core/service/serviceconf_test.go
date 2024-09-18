@@ -3,7 +3,7 @@ package service
 import (
 	"testing"
 
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/logx"
 )
 
 func TestServiceConf(t *testing.T) {

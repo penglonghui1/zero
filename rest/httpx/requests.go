@@ -10,9 +10,9 @@ import (
 	"strings"
 
 	"github.com/963204765/httpclient/httplib"
-	"github.com/pengcainiao/zero/core/mapping"
-	"github.com/pengcainiao/zero/rest/httprouter"
-	"github.com/pengcainiao/zero/rest/pathvar"
+	"github.com/pengcainiao2/zero/core/mapping"
+	"github.com/pengcainiao2/zero/rest/httprouter"
+	"github.com/pengcainiao2/zero/rest/pathvar"
 )
 
 const (
@@ -32,8 +32,8 @@ var (
 		mapping.WithCanonicalKeyFunc(textproto.CanonicalMIMEHeaderKey))
 )
 
-//SendHTTP 发送http请求
-//Deprecated: 使用 httprouter.PerformanceRequest 代替，新的方法中集成了sentry
+// SendHTTP 发送http请求
+// Deprecated: 使用 httprouter.PerformanceRequest 代替，新的方法中集成了sentry
 func SendHTTP(ctx *httprouter.Context, method, url string) *httplib.BeegoHTTPRequest {
 	req := httplib.NewBeegoRequest(url, method)
 	req.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true})
@@ -47,7 +47,7 @@ func SendHTTP(ctx *httprouter.Context, method, url string) *httplib.BeegoHTTPReq
 	return req
 }
 
-//PerformanceRequest 发起HTTP请求
+// PerformanceRequest 发起HTTP请求
 func PerformanceRequest(ctx *httprouter.Context, req *http.Request) (data []byte, err error) {
 	header := ctx.Data
 	req.Header.Add("Authorization", header.Authorization)

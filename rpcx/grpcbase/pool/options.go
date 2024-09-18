@@ -21,9 +21,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/pengcainiao/zero/core/env"
+	"github.com/pengcainiao2/zero/core/env"
 
-	"github.com/pengcainiao/zero/rpcx/clientinterceptors"
+	"github.com/pengcainiao2/zero/rpcx/clientinterceptors"
 
 	grpc_retry "github.com/grpc-ecosystem/go-grpc-middleware/retry"
 	"google.golang.org/grpc/balancer/roundrobin"

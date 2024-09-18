@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/pengcainiao/zero/core/collection"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/proc"
-	"github.com/pengcainiao/zero/core/stat"
-	"github.com/pengcainiao/zero/core/stringx"
-	"github.com/pengcainiao/zero/core/threading"
+	"github.com/pengcainiao2/zero/core/collection"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/proc"
+	"github.com/pengcainiao2/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/stringx"
+	"github.com/pengcainiao2/zero/core/threading"
 )
 
 const (

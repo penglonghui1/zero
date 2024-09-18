@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/pengcainiao/zero/core/lang"
-	"github.com/pengcainiao/zero/core/threading"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/threading"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 const drainWorkers = 8

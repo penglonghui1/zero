@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pengcainiao/zero/core/executors"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/executors"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/syncx"
 )
 
 var (

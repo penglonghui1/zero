@@ -11,11 +11,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pengcainiao/zero/core/executors"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/proc"
-	"github.com/pengcainiao/zero/core/sysx"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/executors"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/proc"
+	"github.com/pengcainiao2/zero/core/sysx"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 const (

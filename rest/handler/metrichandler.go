@@ -3,8 +3,8 @@ package handler
 import (
 	"net/http"
 
-	"github.com/pengcainiao/zero/core/stat"
-	"github.com/pengcainiao/zero/core/timex"
+	"github.com/pengcainiao2/zero/core/stat"
+	"github.com/pengcainiao2/zero/core/timex"
 )
 
 // MetricHandler returns a middleware that stat the metrics.

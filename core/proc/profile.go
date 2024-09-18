@@ -15,7 +15,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/logx"
 )
 
 // DefaultMemProfileRate is the default memory profiling rate.

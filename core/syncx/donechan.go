@@ -3,7 +3,7 @@ package syncx
 import (
 	"sync"
 
-	"github.com/pengcainiao/zero/core/lang"
+	"github.com/pengcainiao2/zero/core/lang"
 )
 
 // A DoneChan is used as a channel that can be closed multiple times and wait for done.

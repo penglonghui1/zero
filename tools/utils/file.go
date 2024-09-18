@@ -3,9 +3,9 @@ package utils
 import (
 	"errors"
 	"fmt"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/tools"
-	"github.com/pengcainiao/zero/tools/syncer"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/tools"
+	"github.com/pengcainiao2/zero/tools/syncer"
 	"mime/multipart"
 	"path"
 	"strconv"

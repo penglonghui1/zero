@@ -1,13 +1,13 @@
 package handler
 
 import (
-	"github.com/pengcainiao/zero/rest/internal/security"
+	"github.com/pengcainiao2/zero/rest/internal/security"
 	"net/http"
 	"time"
 
-	"github.com/pengcainiao/zero/core/codec"
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/rest/httpx"
+	"github.com/pengcainiao2/zero/core/codec"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/rest/httpx"
 )
 
 const contentSecurity = "X-Content-Security"

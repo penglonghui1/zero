@@ -7,8 +7,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/pengcainiao/zero/core/env"
-	"github.com/pengcainiao/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/env"
+	"github.com/pengcainiao2/zero/core/logx"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
@@ -78,12 +78,12 @@ func Success(maps ...map[string]interface{}) Response {
 	return res
 }
 
-//ErrorSame 内部错误与外部错误相同时使用
+// ErrorSame 内部错误与外部错误相同时使用
 func ErrorSame(code int, err string) Response {
 	return Error(code, err, err)
 }
 
-//Error error，外部错误简单不暴露实现细节，内部错误应为真实错误
+// Error error，外部错误简单不暴露实现细节，内部错误应为真实错误
 func Error(code int, outError string, internalError interface{}) Response {
 	switch e := internalError.(type) {
 	case error:
@@ -94,7 +94,7 @@ func Error(code int, outError string, internalError interface{}) Response {
 	return Response{Code: code}
 }
 
-//HttpCode 标准化HTTP状态码
+// HttpCode 标准化HTTP状态码
 func HttpCode(customResponseCode int) int {
 	if customResponseCode == -1 {
 		return 500
@@ -112,7 +112,7 @@ func HttpCode(customResponseCode int) int {
 	}
 }
 
-//ResponseJSONContent 返回json
+// ResponseJSONContent 返回json
 func ResponseJSONContent(c *gin.Context, resp interface{}) {
 	span := trace.SpanFromContext(c.Request.Context())
 	switch v := resp.(type) {

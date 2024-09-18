@@ -1,7 +1,7 @@
 package fs
 
 import (
-	"github.com/pengcainiao/zero/core/hash"
+	"github.com/pengcainiao2/zero/core/hash"
 	"io/ioutil"
 	"os"
 )

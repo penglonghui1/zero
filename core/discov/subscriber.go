@@ -1,12 +1,12 @@
 package discov
 
 import (
-	"github.com/pengcainiao/zero/core/discov/internal"
+	"github.com/pengcainiao2/zero/core/discov/internal"
 	"sync"
 	"sync/atomic"
 
-	"github.com/pengcainiao/zero/core/logx"
-	"github.com/pengcainiao/zero/core/syncx"
+	"github.com/pengcainiao2/zero/core/logx"
+	"github.com/pengcainiao2/zero/core/syncx"
 )
 
 type (
