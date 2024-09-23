@@ -27,20 +27,7 @@ import (
 
 // GRPCServerPort grpc服务端口
 const (
-	CloudDiskSVC        = "clouddisk-svc"
-	ExampleSVC          = "example-svc"
-	UserCenterSVC       = "usercenter-svc"
-	CronJobSVC          = "cronjob-svc"
-	TaskSVC             = "flyele-svc"
-	RecordSVC           = "record-svc"
-	NoticeSVC           = "notice-gateway-svc"
-	OfficialListenerSVC = "official-listener-svc"
-	UserInteractionSVC  = "user-interaction-svc"
-	DataSyncerSVC       = "okr-svc"
-	PushGatewaySVC      = "push-gateway-svc"
-	WorkWechatSVC       = "work-wechat-svc"
-	LabelSVC            = "label-svc"
-	OperationSystemSVC  = "operation-system-svc"
+	UserCenterSVC = "usercenter-svc"
 )
 
 var (

@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc/metadata"
 )
 
-//GrpcContext grpc需注入的header值
+// GrpcContext grpc需注入的header值
 type GrpcContext map[string]interface{}
 
 const (

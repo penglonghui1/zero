@@ -2,7 +2,7 @@ package grpcbase
 
 import jsoniter "github.com/json-iterator/go"
 
-//Response
+// Response
 type Response struct {
 	Total   int         `json:"total,omitempty"`   //总数
 	Message string      `json:"message,omitempty"` //错误消息

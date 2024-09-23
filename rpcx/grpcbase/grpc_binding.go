@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-//ServerBinding 服务端绑定
+// ServerBinding 服务端绑定
 type ServerBinding interface {
 	//RegisterServer 注册服务
 	RegisterServer(srv *grpc.Server) error
@@ -13,7 +13,7 @@ type ServerBinding interface {
 	GRPCHandler() map[string]grpctransport.Handler
 }
 
-//ClientBinding 客户端绑定
+// ClientBinding 客户端绑定
 type ClientBinding interface {
 	//GRPCClient 获取客户端接口类型
 	GRPCClient(cc *grpc.ClientConn) interface{}
