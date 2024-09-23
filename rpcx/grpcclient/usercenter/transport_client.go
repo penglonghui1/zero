@@ -45,7 +45,7 @@ func decodeGetUserResponse(ctx context.Context, resp interface{}) (response inte
 
 	return grpcbase.Response{
 		Data: GetUserResponse{
-			name: pbresp.name,
+			Name: pbresp.Name,
 		},
 	}, nil
 }

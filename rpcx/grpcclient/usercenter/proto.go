@@ -28,7 +28,7 @@ func (s GetUserRequest) String() string {
 }
 
 type GetUserResponse struct {
-	name string `json:"name,omitempty"`
+	Name string `json:"name,omitempty"`
 }
 
 func (s GetUserResponse) String() string {

@@ -11,7 +11,7 @@ message GetUserRequest{
 }
 
 message GetUserResponse{
-  string name =1;
+  string Name =1;
 }
 
 service UserCenter{

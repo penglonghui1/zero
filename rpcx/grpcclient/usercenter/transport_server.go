@@ -51,7 +51,7 @@ func encodeGetUserResponse(ctx context.Context, req interface{}) (interface{}, e
 	//在所有类型中匹配名称相同的消息名称
 	resp := r.Data.(GetUserResponse)
 	pbresp := &pb.GetUserResponse{
-		name: resp.name,
+		Name: resp.Name,
 	}
 	b, err := stdproto.Marshal(pbresp)
 	if err != nil {
