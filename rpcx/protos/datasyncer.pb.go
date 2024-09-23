@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.30.0
 // 	protoc        v3.21.12
-// source: datasyncer.proto
+// source: okr.proto
 
 package pb
 
@@ -328,5 +328,5 @@ var _DataSyncer_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "datasyncer.proto",
+	Metadata: "okr.proto",
 }

@@ -36,7 +36,7 @@ const (
 	NoticeSVC           = "notice-gateway-svc"
 	OfficialListenerSVC = "official-listener-svc"
 	UserInteractionSVC  = "user-interaction-svc"
-	DataSyncerSVC       = "datasyncer-svc"
+	DataSyncerSVC       = "okr-svc"
 	PushGatewaySVC      = "push-gateway-svc"
 	WorkWechatSVC       = "work-wechat-svc"
 	LabelSVC            = "label-svc"
