@@ -26,7 +26,6 @@ import (
 	"github.com/pengcainiao2/zero/rpcx/clientinterceptors"
 
 	grpc_retry "github.com/grpc-ecosystem/go-grpc-middleware/retry"
-	"google.golang.org/grpc/balancer/roundrobin"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials"
 
@@ -116,7 +115,7 @@ func Dial(address string) (*grpc.ClientConn, error) {
 				grpc_retry.WithPerRetryTimeout(1*time.Second),
 				grpc_retry.WithBackoff(grpc_retry.BackoffLinear(100*time.Millisecond)),
 				grpc_retry.WithCodes(codes.NotFound, codes.Aborted))),
-		grpc.WithBalancerName(roundrobin.Name),
+		//grpc.WithBalancerName(roundrobin.Name),
 		grpc.WithBackoffMaxDelay(BackoffMaxDelay),
 		grpc.WithInitialWindowSize(InitialWindowSize),
 		grpc.WithInitialConnWindowSize(InitialConnWindowSize),
