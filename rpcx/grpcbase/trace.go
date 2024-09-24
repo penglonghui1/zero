@@ -3,6 +3,7 @@ package grpcbase
 import (
 	"context"
 	"fmt"
+
 	"github.com/google/martian/log"
 
 	"go.opentelemetry.io/otel/attribute"

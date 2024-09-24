@@ -5,15 +5,15 @@ option go_package=".;pb";
 import "protos/grpc_base.proto";
 
 
-message GetOkrRequest{
+message GetUserRequest{
   string Keyword=1 ;
   UserContext Context = 3;
 }
 
-message GetOkrResponse{
+message GetUserResponse{
   string Name =1;
 }
 
-service Okr{
-  rpc GetOkr(GetOkrRequest) returns(Response) ;
+service UserCenter{
+  rpc GetUser(GetUserRequest) returns(Response) ;
 }

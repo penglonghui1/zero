@@ -28,6 +28,7 @@ import (
 // GRPCServerPort grpc服务端口
 const (
 	UserCenterSVC = "usercenter-svc"
+	OkrSVC        = "okr-svc"
 )
 
 var (
