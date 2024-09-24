@@ -26,6 +26,16 @@ func (c *clientBinding) GetUser(ctx context.Context, params GetUserRequest) grpc
 		ctx = context.Background()
 		log.Println("GRPC：GetUser request context is nil，trace span将无法生效")
 	}
+	if c == nil {
+		log.Println("--- GetUser nil")
+	}
+	if ctx == nil {
+		log.Println("--- GetUser ctx nil")
+	}
+	if params.Context == nil {
+		log.Println("--- GetUser params nil")
+	}
+
 	response, err := c.getUser(ctx, params)
 	if err != nil {
 		return grpcbase.Response{
