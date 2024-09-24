@@ -17,6 +17,16 @@ type Repository interface {
 	GetUser(ctx context.Context, request GetUserRequest) grpcbase.Response
 }
 
+type Any struct {
+	type_url string `json:"type_url,omitempty"`
+	value    []byte `json:"value,omitempty"`
+}
+
+func (s Any) String() string {
+	b, _ := jsoniter.Marshal(s)
+	return string(b)
+}
+
 type GetUserRequest struct {
 	Keyword string       `json:"keyword,omitempty"`
 	Context *UserContext `json:"context,omitempty"`
@@ -32,6 +42,17 @@ type GetUserResponse struct {
 }
 
 func (s GetUserResponse) String() string {
+	b, _ := jsoniter.Marshal(s)
+	return string(b)
+}
+
+type Response struct {
+	Message string `json:"message,omitempty"`
+	Total   int32  `json:"total,omitempty"`
+	Data    *Any   `json:"data,omitempty"`
+}
+
+func (s Response) String() string {
 	b, _ := jsoniter.Marshal(s)
 	return string(b)
 }

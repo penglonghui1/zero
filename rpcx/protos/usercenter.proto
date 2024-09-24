@@ -15,5 +15,5 @@ message GetUserResponse{
 }
 
 service UserCenter{
-  rpc GetUser(GetUserRequest) returns(GetUserResponse) ;
+  rpc GetUser(GetUserRequest) returns(Response) ;
 }
