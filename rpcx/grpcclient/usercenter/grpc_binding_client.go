@@ -22,6 +22,7 @@ type clientBinding struct {
 }
 
 func (c *clientBinding) GetUser(ctx context.Context, params GetUserRequest) grpcbase.Response {
+	log.Println("alsjdlaksdjl")
 	if ctx == nil {
 		ctx = context.Background()
 		log.Println("GRPC：GetUser request context is nil，trace span将无法生效")
