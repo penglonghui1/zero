@@ -49,6 +49,7 @@ require (
 	github.com/go-playground/locales v0.13.0
 	github.com/go-playground/universal-translator v0.17.0
 	github.com/go-playground/validator/v10 v10.4.1
+	github.com/google/martian v2.1.0+incompatible
 	github.com/silenceper/wechat/v2 v2.0.4
 	github.com/tidwall/gjson v1.14.2
 	golang.org/x/crypto v0.6.0

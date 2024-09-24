@@ -3,6 +3,7 @@ package grpcbase
 import (
 	"context"
 	"fmt"
+	"github.com/google/martian/log"
 
 	"go.opentelemetry.io/otel/attribute"
 
@@ -39,6 +40,7 @@ func RPCServerSideLogic(rpcServiceName, requestID string, requestData interface{
 		resp := businessFunc(context.Background(), requestData)
 		return resp
 	}
+	log.Infof("GetUser begin 55555")
 	ctx1, span, requestID := NewTraceSpanFromRequestID("server", rpcServiceName, requestID)
 	defer span.End()
 

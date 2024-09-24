@@ -4,6 +4,7 @@ package usercenter
 
 import (
 	"context"
+	"github.com/google/martian/log"
 
 	jsoniter "github.com/json-iterator/go"
 	"github.com/pengcainiao2/zero/rpcx/grpcbase"
@@ -86,10 +87,14 @@ func NewService() Repository {
 }
 
 func (s service) GetUser(ctx context.Context, req GetUserRequest) grpcbase.Response {
+	log.Infof("GetUser begin 1111")
 	if GetUserHandler != nil {
+		log.Infof("GetUser begin 222")
 		if req.Context == nil {
+			log.Infof("GetUser begin 3333")
 			panic("grpc context is nil and requestID must be set")
 		}
+		log.Infof("GetUser begin 4444")
 		return grpcbase.RPCServerSideLogic("/pb.usercenter/GetUser", req.Context.RequestID, req, func(ctx context.Context, req interface{}) grpcbase.Response {
 			return GetUserHandler(ctx, req.(GetUserRequest))
 		})
