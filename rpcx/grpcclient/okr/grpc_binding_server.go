@@ -15,6 +15,7 @@ import (
 )
 
 type serverBinding struct {
+	pb.UnimplementedOkrServer
 	getOkr grpctransport.Handler
 }
 

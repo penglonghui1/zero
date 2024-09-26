@@ -15,6 +15,7 @@ import (
 )
 
 type serverBinding struct {
+	pb.UnimplementedUserCenterServer
 	getUser grpctransport.Handler
 }
 

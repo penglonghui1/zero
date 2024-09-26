@@ -16,7 +16,7 @@ fi
 for file in ./protos/*.proto; do
 #  protoc -I ./protos --go_out=plugins=grpc:./protocols_rules --swagger_out=logtostderr=true:./protos --grpc-gateway_out=logtostderr=true:./protocols_rules $file
     protoc -I ./protos --go_out=./protos $file
-    protoc -I ./protos --go-grpc_out=./protos $file
+    protoc -I ./protos --go-grpc_out==require_unimplemented_servers=false:./protos $file
     echo "   - ${file} DONE!"
 done
 
